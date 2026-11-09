@@ -1,0 +1,198 @@
+=== SJA-UTA: Sistema Jerárquico Académico ===
+Datos iniciales cargados
+
+--- Organización (árbol general) ---
+ 1. Mostrar jerarquía
+ 2. Agregar unidad
+ 3. Buscar unidad
+ 4. Altura y hojas del árbol
+ 5. Grado y nivel de una unidad
+ 6. Eliminar unidad
+ 7. Reiniciar datos iniciales
+ 8. Ejecutar reto integrador
+ 9. Transformar a árbol binario
+--- Estudiantes de un paralelo (ABB) ---
+10. Insertar estudiante
+11. Buscar estudiante
+12. Recorrer (pre / in / posorden)
+13. Modificar estudiante
+14. Eliminar estudiante
+15. Estadísticas del paralelo
+16. Traza de recorrido
+ 0. Salir
+Opción: [Reto integrador] 
+=== RETO INTEGRADOR SJA-UTA ===
+1. Jerarquía y ruta
+UTA - Universidad Técnica de Ambato (UNIVERSIDAD)
+  FCHE - Ciencias Humanas y de la Educación (FACULTAD)
+    EB - Educación Básica (CARRERA)
+      EB-N1 - Nivel 1 (NIVEL)
+        EB-N1-A - Paralelo A (PARALELO)
+        EB-N1-B - Paralelo B (PARALELO)
+    SW - Software (CARRERA)
+      SW-N3 - Nivel 3 (NIVEL)
+        SW-N3-A - Paralelo A (PARALELO)
+Nivel SW-N3-A: 4 | Altura: 4 | Hojas: 3
+Ruta EB-N1-A: UTA -> FCHE -> EB -> EB-N1 -> EB-N1-A
+Ruta inexistente: No existe
+2. Protección y representación hijo izquierdo / hermano derecho
+Eliminar EB-N1-A con estudiantes: false
+Eliminar SW-N3 con subunidad: false
+Eliminar código inexistente: false
+Eliminar SW-N3-A vacío: true
+UTA [izquierdo=FCHE, derecho=null]
+FCHE [izquierdo=EB, derecho=null]
+EB [izquierdo=EB-N1, derecho=SW]
+EB-N1 [izquierdo=EB-N1-A, derecho=null]
+EB-N1-A [izquierdo=null, derecho=EB-N1-B]
+EB-N1-B [izquierdo=null, derecho=null]
+SW [izquierdo=SW-N3, derecho=null]
+SW-N3 [izquierdo=SW-N3-A, derecho=null]
+SW-N3-A [izquierdo=null, derecho=null]
+3. Validaciones y traslado
+Matrícula 0, notas 15/NaN/Infinity y traslados inválidos: rechazados
+4. Modificación y eliminaciones del ABB
+Matrícula 35: promedio 9.80; cédula inválida y promedio 15 no cambiaron el registro
+A inorden antes: 10, 15, 20, 30, 35, 40, 45, 50, 55
+Traslado 10: hoja | A: 15, 20, 30, 35, 40, 45, 50, 55 | B: 10
+Traslado 40: un hijo | A: 15, 20, 30, 35, 45, 50, 55 | B: 10, 40
+Traslado 45: dos hijos | A: 15, 20, 30, 35, 50, 55 | B: 10, 40, 45
+Traslado 30: raíz; dos hijos | A: 15, 20, 35, 50, 55 | B: 10, 30, 40, 45
+Destino duplicado y traslado repetido: rechazados sin pérdida
+5. Estadísticas finales (nota mínima 8.00)
+EB-N1-A | inorden: 15, 20, 35, 50, 55 | cantidad: 5 | altura: 2 | menor: 15 | mayor: 55 | promedio: 8.36 | aprobados: 5
+EB-N1-B | inorden: 10, 30, 40, 45 | cantidad: 4 | altura: 2 | menor: 10 | mayor: 45 | promedio: 8.00 | aprobados: 4
+El inorden visita izquierda, nodo y derecha; el ABB mantiene menores a la izquierda y mayores a la derecha.
+6. Ejecute la opción 7 para reconstruir el estado inicial.
+
+
+--- Organización (árbol general) ---
+ 1. Mostrar jerarquía
+ 2. Agregar unidad
+ 3. Buscar unidad
+ 4. Altura y hojas del árbol
+ 5. Grado y nivel de una unidad
+ 6. Eliminar unidad
+ 7. Reiniciar datos iniciales
+ 8. Ejecutar reto integrador
+ 9. Transformar a árbol binario
+--- Estudiantes de un paralelo (ABB) ---
+10. Insertar estudiante
+11. Buscar estudiante
+12. Recorrer (pre / in / posorden)
+13. Modificar estudiante
+14. Eliminar estudiante
+15. Estadísticas del paralelo
+16. Traza de recorrido
+ 0. Salir
+Opción: [Reto integrador] 
+=== RETO INTEGRADOR SJA-UTA ===
+El reto ya fue ejecutado. Estado final verificado; no se crearon duplicados.
+EB-N1-A | inorden: 15, 20, 35, 50, 55 | cantidad: 5 | altura: 2 | menor: 15 | mayor: 55 | promedio: 8.36 | aprobados: 5
+EB-N1-B | inorden: 10, 30, 40, 45 | cantidad: 4 | altura: 2 | menor: 10 | mayor: 45 | promedio: 8.00 | aprobados: 4
+
+
+--- Organización (árbol general) ---
+ 1. Mostrar jerarquía
+ 2. Agregar unidad
+ 3. Buscar unidad
+ 4. Altura y hojas del árbol
+ 5. Grado y nivel de una unidad
+ 6. Eliminar unidad
+ 7. Reiniciar datos iniciales
+ 8. Ejecutar reto integrador
+ 9. Transformar a árbol binario
+--- Estudiantes de un paralelo (ABB) ---
+10. Insertar estudiante
+11. Buscar estudiante
+12. Recorrer (pre / in / posorden)
+13. Modificar estudiante
+14. Eliminar estudiante
+15. Estadísticas del paralelo
+16. Traza de recorrido
+ 0. Salir
+Opción: [Reiniciar] Datos iniciales reconstruidos: 9 en EB-N1-A, 0 en EB-N1-B y sin SW
+
+--- Organización (árbol general) ---
+ 1. Mostrar jerarquía
+ 2. Agregar unidad
+ 3. Buscar unidad
+ 4. Altura y hojas del árbol
+ 5. Grado y nivel de una unidad
+ 6. Eliminar unidad
+ 7. Reiniciar datos iniciales
+ 8. Ejecutar reto integrador
+ 9. Transformar a árbol binario
+--- Estudiantes de un paralelo (ABB) ---
+10. Insertar estudiante
+11. Buscar estudiante
+12. Recorrer (pre / in / posorden)
+13. Modificar estudiante
+14. Eliminar estudiante
+15. Estadísticas del paralelo
+16. Traza de recorrido
+ 0. Salir
+Opción: Código: [Buscar unidad] No existe
+
+--- Organización (árbol general) ---
+ 1. Mostrar jerarquía
+ 2. Agregar unidad
+ 3. Buscar unidad
+ 4. Altura y hojas del árbol
+ 5. Grado y nivel de una unidad
+ 6. Eliminar unidad
+ 7. Reiniciar datos iniciales
+ 8. Ejecutar reto integrador
+ 9. Transformar a árbol binario
+--- Estudiantes de un paralelo (ABB) ---
+10. Insertar estudiante
+11. Buscar estudiante
+12. Recorrer (pre / in / posorden)
+13. Modificar estudiante
+14. Eliminar estudiante
+15. Estadísticas del paralelo
+16. Traza de recorrido
+ 0. Salir
+Opción: Código del paralelo (ej. SW-N3-B): [Estadísticas] Total: 9 | Altura: 3 | Menor: 10 | Mayor: 55 | Promedio general: 8.00 | Aprobados (>= 8.00): 9
+
+--- Organización (árbol general) ---
+ 1. Mostrar jerarquía
+ 2. Agregar unidad
+ 3. Buscar unidad
+ 4. Altura y hojas del árbol
+ 5. Grado y nivel de una unidad
+ 6. Eliminar unidad
+ 7. Reiniciar datos iniciales
+ 8. Ejecutar reto integrador
+ 9. Transformar a árbol binario
+--- Estudiantes de un paralelo (ABB) ---
+10. Insertar estudiante
+11. Buscar estudiante
+12. Recorrer (pre / in / posorden)
+13. Modificar estudiante
+14. Eliminar estudiante
+15. Estadísticas del paralelo
+16. Traza de recorrido
+ 0. Salir
+Opción: Código del paralelo (ej. SW-N3-B): [Estadísticas] Total: 0 | Altura: -1 | Menor: — | Mayor: — | Promedio general: 0.00 | Aprobados (>= 8.00): 0
+
+--- Organización (árbol general) ---
+ 1. Mostrar jerarquía
+ 2. Agregar unidad
+ 3. Buscar unidad
+ 4. Altura y hojas del árbol
+ 5. Grado y nivel de una unidad
+ 6. Eliminar unidad
+ 7. Reiniciar datos iniciales
+ 8. Ejecutar reto integrador
+ 9. Transformar a árbol binario
+--- Estudiantes de un paralelo (ABB) ---
+10. Insertar estudiante
+11. Buscar estudiante
+12. Recorrer (pre / in / posorden)
+13. Modificar estudiante
+14. Eliminar estudiante
+15. Estadísticas del paralelo
+16. Traza de recorrido
+ 0. Salir
+Opción: Hasta luego.

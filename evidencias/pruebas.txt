@@ -1,0 +1,3 @@
+APROBADAS: 18 comprobaciones
+ESTADO FINAL: A=15,20,35,50,55; B=10,30,40,45; promedios=8.36/8.00
+REINICIO: A=9 matrículas; B=0; SW inexistente
